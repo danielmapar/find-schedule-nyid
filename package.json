@@ -1,0 +1,8 @@
+{
+  "main": "nyid.js",
+  "type": "module",
+  "dependencies": {
+    "dateformat": "^5.0.3",
+    "node-fetch": "^2.6.7"
+  }
+}
