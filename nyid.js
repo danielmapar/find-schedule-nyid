@@ -33,6 +33,8 @@ async function findSchedule() {
         '3:20 PM','3:40 PM','4:00 PM','4:20 PM','4:40 PM','5:00 PM',
     ]
 
+    console.log("Started processing...")
+
     const numOfDays = 60
     for (let dayIndex = 0; dayIndex < numOfDays; dayIndex++) {
 
@@ -60,8 +62,9 @@ async function findSchedule() {
             
             if (data.responseDataDto && data.responseDataDto.data && data.responseDataDto.data['$values'] && data.responseDataDto.data['$values'].length > 0) {
                 console.log("--------> Found a date for " + requestBody["startDate"] + " at " + requestBody["startTime"])
+                break
             } else {
-                // console.log("Nothing found for " + requestBody["startDate"] + " at " + requestBody["startTime"])
+                console.log("Nothing found for " + requestBody["startDate"] + " at " + requestBody["startTime"])
             }
             
             // Wait 5 seconds after checking a day for all times
