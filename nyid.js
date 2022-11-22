@@ -68,6 +68,8 @@ async function findSchedule() {
             await setTimeout(5000);
         }
     }
+
+    console.log("Done!")
 }
 
 findSchedule();
